@@ -1,1 +1,99 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=gg+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #36393f;
+      font-family: 'gg Sans', 'Segoe UI', sans-serif;
+      color: #dcddde;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: #2f3136;
+      padding: 40px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 460px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .logo {
+      width: 72px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #b9bbbe;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .username {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    a {
+      color: #00b0f4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      margin-top: 20px;
+      background-color: #5865f2;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      font-size: 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #4752c4;
+    }
+
+    @media (max-width: 500px) {
+      .box {
+        margin: 10px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img class="logo" src="https://discord.com/assets/1c4aef2d7432136e1d31b00dbdb4db72.svg" alt="Discord logo" />
+    <h1>Account Disabled</h1>
+    <p>Hi <span class="username">arman.gov#0001</span>, your account has been disabled for violating our Terms of Service.</p>
+    <p>If you think this was a mistake, you can appeal the decision.</p>
+    <a href="https://support.discord.com/hc/en-us/requests/new" target="_blank">
+      <button class="btn">Submit an Appeal</button>
+    </a>
+  </div>
+</body>
+</html>
