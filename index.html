@@ -1,125 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Account Disabled - Discord</title>
-  <link rel="icon" href="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    @font-face {
-      font-family: 'gg sans';
-      src: url('https://cdn.glitch.global/9ad3a876-10fa-4a8e-a9ce-5cbe86d8be68/ggsans.woff2') format('woff2');
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Discord - Account Disabled</title>
+<link rel="icon" href="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" />
+<style>
+  @font-face {
+    font-family: "gg sans";
+    src: url("https://cdn.glitch.global/9ad3a876-10fa-4a8e-a9ce-5cbe86d8be68/ggsans.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background-color: #36393f;
+    font-family: "gg sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #dcddde;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background: #2f3136;
+    padding: 12px 20px;
+    border-bottom: 1px solid #202225;
+    display: flex;
+    align-items: center;
+  }
+  header img {
+    height: 28px;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .card {
+    background: #2f3136;
+    border-radius: 8px;
+    max-width: 460px;
+    width: 100%;
+    box-shadow: 0 0 30px rgb(0 0 0 / 0.4);
+    text-align: center;
+    padding: 48px 40px 40px;
+    animation: fadeIn 0.3s ease forwards;
+  }
+  .card img.alert-icon {
+    width: 48px;
+    margin-bottom: 24px;
+    opacity: 0.85;
+  }
+  h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  p {
+    color: #b9bbbe;
+    font-size: 16px;
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  p strong.username {
+    color: #fff;
+    font-weight: 600;
+  }
+  a {
+    color: #00b0f4;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .btn-appeal {
+    margin-top: 32px;
+    background: #5865f2;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-appeal:hover {
+    background: #4752c4;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'gg sans', 'Segoe UI', sans-serif;
-      background-color: #36393f;
-      color: #dcddde;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .header {
-      background-color: #2f3136;
-      display: flex;
-      align-items: center;
-      padding: 12px 20px;
-      border-bottom: 1px solid #202225;
-    }
-
-    .header img {
-      height: 28px;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: calc(100vh - 60px);
-      padding: 20px;
-    }
-
+  }
+  @media (max-width: 520px) {
     .card {
-      background-color: #2f3136;
-      padding: 40px;
-      border-radius: 8px;
-      max-width: 480px;
-      width: 100%;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      animation: fadeIn 0.4s ease-in-out;
+      padding: 36px 24px 32px;
     }
-
-    .status-icon {
-      width: 60px;
-      margin-bottom: 20px;
-      opacity: 0.8;
+    header {
+      padding: 10px 16px;
     }
-
     h1 {
-      color: #fff;
       font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
-
-    .info {
-      font-size: 15px;
-      color: #b9bbbe;
-      margin-bottom: 8px;
-      line-height: 1.6;
-    }
-
-    .username {
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 22px;
-      background-color: #5865f2;
-      color: white;
-      text-decoration: none;
-      padding: 12px 24px;
+    p {
       font-size: 14px;
-      font-weight: 600;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
     }
-
-    .btn:hover {
-      background-color: #4752c4;
+    .btn-appeal {
+      font-size: 14px;
+      padding: 12px 24px;
+      margin-top: 24px;
     }
-
-    a {
-      color: #00b0f4;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <div class="header">
-    <img src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" alt="Discord Logo">
-  </div>
-
-  <div class="container">
-    <div class="card">
-      <img class="status-icon" src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Alert Icon" />
-      <h1>Account Disabled</h1>
-      <p class="info">Hi <span class="username">sackuhtaters</span>, your Discord account has been disabled for violating our <a href="https://discord.com/terms" target="_blank">Terms of Service</a> or <a href="https://discord.com/guidelines" target="_blank">Community Guidelines</a>.</p>
-      <p class="info">You will not be able to access Discord while your account is disabled. If you believe this was a mistake, you can appeal the decision below.</p>
-      <a href="https://support.discord.com/hc/en-us/requests/new" class="btn" target="_blank">Submit an Appeal</a>
-    </div>
-  </div>
+<header>
+  <img src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" alt="Discord Logo" />
+</header>
+<main>
+  <section class="card" role="alert" aria-labelledby="disabled-title" aria-describedby="disabled-desc">
+    <img class="alert-icon" src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="" aria-hidden="true" />
+    <h1 id="disabled-title">Account Disabled</h1>
+    <p id="disabled-desc">Hi <strong class="username">sackuhtaters</strong>, your Discord account has been disabled for violating our <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> or <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">Community Guidelines</a>.</p>
+    <p>You will not be able to access Discord while your account is disabled. If you believe this was a mistake, you may appeal the decision.</p>
+    <a href="https://support.discord.com/hc/en-us/requests/new" target="_blank" rel="noopener noreferrer" class="btn-appeal" role="button">Submit an Appeal</a>
+  </section>
+</main>
 </body>
 </html>
