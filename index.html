@@ -1,99 +1,152 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discord</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=gg+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn.glitch.global/9ad3a876-10fa-4a8e-a9ce-5cbe86d8be68/discord.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    @font-face {
+      font-family: 'gg sans';
+      src: url('https://cdn.glitch.global/9ad3a876-10fa-4a8e-a9ce-5cbe86d8be68/ggsans.woff2') format('woff2');
+      font-weight: 400;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
       background-color: #36393f;
-      font-family: 'gg Sans', 'Segoe UI', sans-serif;
+      font-family: 'gg sans', 'Segoe UI', sans-serif;
       color: #dcddde;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      background-color: #2f3136;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #202225;
+    }
+
+    .header img {
+      width: 32px;
+      margin-right: 12px;
+    }
+
+    .header h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+      color: #fff;
+    }
+
+    .container {
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      padding: 30px 16px;
     }
 
     .box {
       background-color: #2f3136;
-      padding: 40px;
       border-radius: 8px;
+      padding: 40px;
       width: 100%;
-      max-width: 460px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      max-width: 480px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
       text-align: center;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .alert-icon {
+      width: 48px;
+      margin-bottom: 18px;
     }
 
     .logo {
-      width: 72px;
-      margin-bottom: 24px;
+      width: 60px;
+      margin-bottom: 12px;
+      opacity: 0.8;
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 24px;
+      font-weight: 600;
       color: #fff;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
 
     p {
+      font-size: 15px;
       color: #b9bbbe;
-      font-size: 16px;
-      margin-bottom: 12px;
+      margin: 10px 0;
     }
 
     .username {
-      color: #fff;
       font-weight: 600;
-    }
-
-    a {
-      color: #00b0f4;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      color: #fff;
     }
 
     .btn {
-      margin-top: 20px;
+      margin-top: 24px;
+      display: inline-block;
       background-color: #5865f2;
       color: white;
       border: none;
-      padding: 12px 22px;
-      font-size: 15px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
       border-radius: 4px;
       cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
     }
 
     .btn:hover {
       background-color: #4752c4;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     @media (max-width: 500px) {
       .box {
-        margin: 10px;
-        padding: 20px;
+        padding: 24px;
+      }
+
+      .header {
+        justify-content: center;
+      }
+
+      .header h2 {
+        font-size: 15px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <img class="logo" src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" alt="Discord logo" />
-    <h1>Account Disabled</h1>
-    <p>Hi <span class="username">sackuhtaters</span>, your account has been disabled for violating our Terms of Service.</p>
-    <p>If you think this was a mistake, you can appeal the decision.</p>
-    <a href="https://support.discord.com/hc/en-us/requests/new" target="_blank">
-      <button class="btn">Submit an Appeal</button>
-    </a>
+  <div class="header">
+    <img src="https://cdn.glitch.global/9ad3a876-10fa-4a8e-a9ce-5cbe86d8be68/discord-logo.png" alt="Discord Logo" />
+    <h2>Discord</h2>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <img class="alert-icon" src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Warning">
+      <h1>Account Disabled</h1>
+      <p>Hi <span class="username">sackuhtaters</span>, your account has been disabled due to a violation of our <a href="https://discord.com/terms" target="_blank" style="color:#00b0f4;">Terms of Service</a> or <a href="https://discord.com/guidelines" target="_blank" style="color:#00b0f4;">Community Guidelines</a>.</p>
+      <p>If you believe this was done in error, you can request a review by submitting an appeal.</p>
+      <a class="btn" href="https://support.discord.com/hc/en-us/requests/new" target="_blank">Submit an Appeal</a>
+    </div>
   </div>
 </body>
 </html>
